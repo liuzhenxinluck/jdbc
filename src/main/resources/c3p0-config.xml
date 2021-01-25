@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <!--  c3p0 的配置文件名必须为 c3p0-config.xml，并且必须放在类路径下-->
+<c3p0-config>
+    <default-config>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=FALSE</property>
+        <property name="dirverclass">com.mysql.jdbc.Driver</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <property name="acquireIncrement">3</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">2</property>
+        <property name="maxPoolSize">10</property>
+    </default-config>
+   <!-- c3p0 的配置文件中可以配置多个连接信息，可以给每个配置命名，这样可以方便的通过配置名称来切换配置信息。文件中默认配置为 mysql 的配置，名为 oracle-config 的配置也是 mysql 的配置。-->
+    <named-config name="oracle-config">
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=FALSE</property>
+        <property name="dirverclass">com.mysql.jdbc.Driver</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <property name="acquireIncrement">3</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">2</property>
+        <property name="maxPoolSize">10</property>
+    </named-config>
+</c3p0-config>
